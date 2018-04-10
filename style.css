@@ -1,0 +1,143 @@
+body {
+	font-family: Arial, Verdana,  sans-serif; 
+	font-size: 11pt; 
+	background-color: #FFE4E1; 
+	color: #333;  
+}
+
+h1 {
+	color: #Black; 
+	font-size: 30pt; 
+	font-family: "Century Gothic";
+	text-align:center;
+	font-weight: normal; 
+	position: absolute;
+	top: 120px;
+}
+h2{
+	color: #Black; 
+	font-size: 10pt; 
+	font-family: "Century Gothic";
+	text-align:center;
+	font-weight: normal; 
+}
+p {
+	text-align: left; 
+	margin-left: 60px; 
+	margin-right: 10px; 
+	font-family: "Century Gothic";
+}
+
+
+#ots {
+	position: absolute;
+	top: 300px;
+	display: inline-block;
+		border: 3px solid #black;
+}
+
+#menu {
+	width: 65,5em;
+	height:5.2em; 
+	color: #Black;
+	text-align:center;
+	background-color: #FFDAB9; 
+	position: absolute;
+	top: 200px;
+}
+
+#menu div {
+	width:64em; 
+	margin: auto;
+	height:5.2em; 
+	text-align:center;
+	text-transform: uppercase;
+}
+
+#menu a {
+	font-variant: small-caps;
+	font-family: "Century Gothic";
+	display:block; 
+	float:left; 
+	color: #800080;
+	font-weight: bold;
+	text-align:center; 
+	padding: 5px 20px;
+	text-decoration: none;
+	height:50px; 
+}
+
+#menu a:hover {
+	color: #Black;	
+	background-color: #FFDAB9;
+	border-top: 4px solid #FFDAB9;
+	padding: 0px 20px 0px 10px;
+	height:60px; 
+	border-radius: 25px;
+}
+
+#galery{
+	position: absolute;
+	top: 300px;
+}
+
+#galery img {
+	margin: 5px;
+	border: 3px solid 	#FFE4C4;
+	opacity: 0.7;
+    filter: alpha(opacity=40); 
+	
+}
+
+#gal img {
+	margin: 5px;
+	border: 3px solid 	#FFE4C4;
+	opacity: 1;
+    filter: alpha(opacity=100); 	
+}
+
+#big:hover img{
+	margin: 5px;
+	border: 3px solid 	#C71585;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+#lefts {
+    float: left;  
+    width: 40%;
+	display: inline-block;
+}
+
+#rights {
+    float: right;    
+    width: 45%; 
+	display: inline-block;
+}
+#ss1 {
+
+	border: 3px solid #black;
+	    float: left;  
+    width: 110%;
+	display: inline-block;
+}
+#ss2 {
+
+	border: 3px solid #black;
+	    float: right;    
+    width: 120%; 
+	display: inline-block;
+}
+@media ( min-width: 800px) {
+#ots {
+width: 100%;
+text-align:center;
+}
+}
+
+@media (max-width: 799px) {
+	#ots {
+width: 70%;
+text-align:center;
+}
+}
