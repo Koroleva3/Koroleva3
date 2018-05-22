@@ -1,17 +1,17 @@
 
-var lastResFind=""; 
-var copy_page=""; 
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
 
 function TrimStr(s) {
      s = s.replace( /^\s+/g, '');
   return s.replace( /\s+$/g, '');
 }
 
-function FindOnPage(inputId) {
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
   var obj = window.document.getElementById(inputId);
   var textToFind;
   if (obj) {
-    textToFind = TrimStr(obj.value);
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
   } 
   else {
     alert("Упс! Мы ничего не нашли.");
@@ -31,8 +31,8 @@ function FindOnPage(inputId) {
 	  copy_page=document.body.innerHTML;
 
   
-  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");
-  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:red'>"+textToFind+"</a>"); 
-  lastResFind=textToFind; 
-  window.location = '#'+textToFind;
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:red'>"+textToFind+"</a>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
  } 
